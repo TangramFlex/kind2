@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+COPY kind2-v1.1.0-linux ./kind2
+
+# z3
+COPY z3 z3
+
+ENTRYPOINT ["./kind2", "--z3_bin", "/z3/bin/z3"]
